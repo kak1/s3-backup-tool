@@ -71,5 +71,5 @@ sh ~/s3-backup-tool/backup.sh
 下記をcrontabに追加
 ```
 # バックアップ
-0 3 * * * sh s3-backup-tool/backup.sh
+0 3 * * * bash -l -c "sh s3-backup-tool/backup.sh"
 ```
