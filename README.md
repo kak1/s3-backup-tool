@@ -31,7 +31,7 @@ password = xxxxxxxx
 ````
 
 ### 4. IAMユーザ追加
-AWSマネジメントコンソールからユーザを追加する。
+AWSマネジメントコンソールからユーザを追加する。  
 https://console.aws.amazon.com/iam/home?region=ap-northeast-1#/users
 
 1. ユーザー名にバックアップIDを入力。ただし、1つのユーザで複数サービスをバックアップする場合は、バックアップIDではなく会社名等でも良い。ただし、その場合「S3BackupTool」ポリシーを使えないので独自のポリシーを生成する必要がある。
@@ -70,5 +70,6 @@ sh ~/s3-backup-tool/backup.sh
 ### 8. バックアップcronの追加
 下記をcrontabに追加
 ```
+# バックアップ
 0 3 * * * sh s3-backup-tool/backup.sh
 ```
